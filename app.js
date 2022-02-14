@@ -38,3 +38,26 @@ document.getElementById('key-pad').addEventListener('click',function(event){
    }
      
 })
+
+function verifyPin(){
+   // console.log('going to verify');
+   const pin = document.getElementById('display-pin').value;
+   const typedNumbers = document.getElementById('typed-numbers').value;
+
+   const successMessage = document.getElementById('notify-success');
+   const failMessage = document.getElementById('notify-fail');
+
+   if(pin == typedNumbers){
+      // console.log('matched YAY');
+      // const successMessage = document.getElementById('notify-success');
+      successMessage.style.display = 'block';
+      failMessage.style.display = 'none';
+   }else{
+      // console.log('opps!!')
+      // const failMessage = document.getElementById('notify-fail');
+      successMessage.style.display = 'none';
+      failMessage.style.display = 'block';
+
+   }
+
+}
